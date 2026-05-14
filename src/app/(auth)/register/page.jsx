@@ -1,10 +1,12 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 const RegisterPage = () => {
+    const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -16,12 +18,13 @@ const RegisterPage = () => {
   const handleRegisterFunc = async (data) => {
     console.log(data);
     const { email, name, photo, password } = data;
+    
     const { data: res, error } = await authClient.signUp.email({
       name: name,
       email: email,
       password: password,
       image: photo,
-      callbackURL: "/",
+      callbackURL: "/login",
     });
     console.log(res, error);
     if (error) {
@@ -30,11 +33,13 @@ const RegisterPage = () => {
 
     if (res) {
       alert("Sign up successful");
+       router.push("/login"); 
     }
   };
   console.log("errors", errors);
   console.log(watch("email"));
   console.log(watch("password"));
+
   return (
     <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
       <div className="p-4 rounded-xl bg-white">
