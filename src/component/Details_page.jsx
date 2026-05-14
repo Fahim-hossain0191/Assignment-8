@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 
 const Details_page = ({ product }) => {
@@ -14,7 +15,7 @@ const Details_page = ({ product }) => {
   } = product;
 
   return (
-    <div className="max-w-2xl mx-auto p-4 bg-gray-200 shadow-lg my-10 rounded-md">
+    <div className="max-w-2xl mx-auto p-4 bg-gray-200 shadow-lg my-10 rounded-md ">
       
       {/* Image Section */}
       {/* <div className="relative w-full h-[400px]">
@@ -47,8 +48,10 @@ const Details_page = ({ product }) => {
               </div>
         </div>
         <div className="flex justify-end">
-
+        <Link href={'/products'}>
+        
         <button className="btn btn-outline btn-secondary ">Products</button>
+        </Link>
         </div>
       </div>
 

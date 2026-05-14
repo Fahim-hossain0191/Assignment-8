@@ -8,7 +8,7 @@ export default function Home() {
  
   console.log(data.length);
   return (
-    <div>
+    <div className="pt-24">
           <Image src={img} alt="image" className="w-full h-[70vh] container mx-auto"></Image>
           <h2 className=" mt-10 text-5xl font-bold text-center">Popular Products</h2>
           <div className="mt-10 container mx-auto grid sm:grid-cols-1 md:grid-cols-3 gap-5">

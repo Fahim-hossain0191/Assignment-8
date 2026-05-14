@@ -3,8 +3,14 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React, { useState } from "react";
 import {useForm} from "react-hook-form"
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 const LoginPage = () => {
+    const handleGoogleSignin=async()=>{
+         const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  console.log("Google sign in",data)
+    }
     const{register,handleSubmit,watch,formState:{errors}} =useForm()
 
 
@@ -59,8 +65,8 @@ const [isShowPassword,setPassword]=useState(false)
           <button className="btn w-full bg-slate-800 text-white">Login</button>
         </form>
         <p className="mt-4">Don't have an account? <Link href={"/register"}className="text-red-500">Register</Link></p>
+       <button className='btn border-blue-500 text-blue-500 mt-2 w-full' onClick={handleGoogleSignin}><FaGoogle ></FaGoogle>Login with google</button>
       </div>
-      
     </div>
   );
 };

@@ -14,7 +14,7 @@ const SeeDetailsPage = async ({ params }) => {
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto pt-24">
       <Details_page product={product} />
     </div>
   );
