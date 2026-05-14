@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
+    "category": "Accessories",
+    "section":"Popular"
+  },
+  {
+    "id": 2,
+    "name": "Beach Flip Flops",
+    "brand": "WaveWalk",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "Comfortable and lightweight flip flops for beach days.",
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77",
+    "category": "Footwear",
+    "section":"Popular"
+  },
+  {
+    "id": 3,
+    "name": "Portable Mini Fan",
+    "brand": "CoolAir",
+    "price": 18,
+    "rating": 4.8,
+    "stock": 15,
+    "description": "Rechargeable portable mini fan for staying cool in summer heat.",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+    "category": "Electronics",
+    "section":"Popular"
+  },
+  {
+    "id": 4,
+    "name": "Summer Straw Hat",
+    "brand": "SunnyStyle",
+    "price": 20,
+    "rating": 4.6,
+    "stock": 8,
+    "description": "Wide-brim straw hat for sun protection and fashion.",
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c",
+    "category": "Fashion"
+  },
+  {
+    "id": 5,
+    "name": "Insulated Water Bottle",
+    "brand": "HydroMax",
+    "price": 25,
+    "rating": 4.9,
+    "stock": 12,
+    "description": "Keeps your drinks cold for up to 24 hours during hot days.",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 6,
+    "name": "Cooling T-Shirt",
+    "brand": "FreshWear",
+    "price": 22,
+    "rating": 4.4,
+    "stock": 18,
+    "description": "Breathable cooling t-shirt designed for summer comfort.",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    "category": "Clothing"
+   
+  }
+]
