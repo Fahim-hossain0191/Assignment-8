@@ -37,6 +37,7 @@
 'use client'
 
 import Image from 'next/image';
+import Image1 from '../../assets/logo2.png'
 import Link from 'next/link';
 import React from 'react';
 import userAvatar from "../../assets/images.png";
@@ -49,10 +50,10 @@ const Navbar = () => {
   const user = session?.user;
    console.log(user)
   return (
-    <div className='fixed top-0 left-0 w-full z-50 bg-slate-200'>
+    <div className='fixed top-0 left-0 w-full z-50 bg-slate-100'>
   <div className='mt-2 container mx-auto flex justify-between items-center gap-4 p-4'>
     
-    <div></div>
+    <div><Image src={Image1} alt="Logo" width={70} height={20} className='text-4xl' /></div>
 
     <ul className='flex justify-between items-center text-gray-700 gap-3'>
       <li><Navlink href={'/'}>Home</Navlink></li>
@@ -65,7 +66,7 @@ const Navbar = () => {
         <div className='flex items-center gap-2'>
           <h2>Hello,{user.name}</h2>
 
-          <div className='bg-slate-400 rounded-full w-[45px] h-[45px] flex justify-center items-center overflow-hidden'>
+          <div className=' bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-full  w-[45px] h-[45px] flex justify-center items-center overflow-hidden'>
             <Image
               src={user?.image ? user.image : userAvatar}
               alt='User Avatar'
