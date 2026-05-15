@@ -6,6 +6,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
 const LoginPage = () => {
   const handleGoogleSignin = async () => {
     const data = await authClient.signIn.social({
@@ -29,6 +30,13 @@ const LoginPage = () => {
       rememberMe: true,
       callbackURL: "/",
     });
+      if (res) {
+    toast.success("Login successful");
+  }
+
+  if (error) {
+    toast.error(error.message || "Login failed");
+  }
     console.log(res, error);
   };
   console.log("errors", errors);
@@ -39,6 +47,7 @@ const LoginPage = () => {
 
   return (
     <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100 mt-10 ">
+       <ToastContainer />
       <div className="mr-10  p-10">
         <Lottie animationData={Animation}></Lottie>
       </div>
