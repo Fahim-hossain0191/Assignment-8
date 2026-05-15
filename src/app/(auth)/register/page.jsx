@@ -83,7 +83,7 @@ const RegisterPage = () => {
             <input
               type="text"
               className="input"
-              placeholder="Enter your email"
+              placeholder="Enter your photo url"
               {...register("photo", {
                 required: "Photo Url filled is required",
               })}
